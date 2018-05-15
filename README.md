@@ -20,6 +20,6 @@ npm run build
 npm run build --report
 ```
 
-#### [项目预览](https://zengtianshengz.github.io/blog/resume-vue/)
+#### [项目预览](https://honoka.me/neb-resume/)
 
 ### 欢迎 star 和 issue
