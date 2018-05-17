@@ -2,7 +2,7 @@
   "head":{
     "name":"星云链",
     "intention":"区块链开发",
-    "tel":"187xxxxx",
+    "tel":"18702186543",
     "email":"wowo@neb",
     "address":"中国",
     "age":"1992.7.28",
@@ -15,7 +15,6 @@
     "interest":"骑行、游泳、编程、音乐、攀岩",
     "speciality":"js、css、html",
     "specialityPer":"40、50、60"
-
   },
   "blogLink":{
     "github":"https://github.com/nitta-honoka",
@@ -56,7 +55,7 @@
         "describe":[
           "轻量级Dom操作库,可类似于jquery操作dom",
           "无依赖,支持AMD,CMD加载",
-          "项目链接: xxxx"
+          "项目链接: https://github.com/ZengTianShengZ/zBase"
         ]
       },
       {
@@ -98,5 +97,4 @@
   "selfAssessment":[
     "   鲁迅先生曾说过:世上本没有路,走的人多了便成了路"
   ]
-
 }
