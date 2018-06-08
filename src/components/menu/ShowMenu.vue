@@ -3,13 +3,13 @@
     <div class="menu-cont">
       <div class="search" @click="onShowSearchBar">
         <i class="icon-search icon-5x"></i>
-        <p class="search-des">查找简历</p>
+        <p class="search-des">搜索简历</p>
       </div>
       <transition name="fade">
         <div class="search-bar" v-show="showSearchBar">
           <div>
-            <label>手机号：</label>
-            <input type="text" v-model="q" placeholder="请输入关键词搜索"/>
+            <label>钱包地址：</label>
+            <input type="text" v-model="title" placeholder="请输入地址搜索"/>
           </div>
           <div class="action">
             <label @click="onSearchClick">搜索</label>
@@ -28,8 +28,8 @@
       <transition name="fade">
         <div class="download-choice" v-show="showDownloadChoice">
           <div class="name">
-            <span>名称：</span>
-            <input type="text" placeholder="请输入简历名称"/>
+            <span>钱包地址：</span>
+            <input type="text" v-model="title" placeholder="请输入地址"/>
           </div>
           <div>
             <span>尺寸：</span>
@@ -51,7 +51,7 @@
             </div>
           </div>
           <div class="save">
-            <label>保存并下载</label>
+            <label @click="saveResume">保存并下载</label>
           </div>
         </div>
       </transition>
@@ -65,9 +65,6 @@
       return {
         msg: 'hello vue',
         showDownloadChoice: false,
-        q: '',
-        url: '',
-        tel: '',
         customPx: {
           width: "",
           height: ""
@@ -78,8 +75,8 @@
       showSearchBar: {
         type: Boolean
       },
-      showSaveBar: {
-        type: Boolean
+      title: {
+        type: String
       }
     },
     methods: {
@@ -100,13 +97,15 @@
         }
       },
       onSearchClick: function () {
-        this.$emit('searchResume', this.q)
+        this.$emit('searchResume', this.title)
       },
-      onShowSaveBar: function() {
-        this.$emit('onShowSaveBar')
-      },
-      onSaveResume: function () {
-        this.$emit('saveResume', {url: this.url, tel: this.tel})
+      saveResume: function () {
+        if (this.customPx.width && this.customPx.height) {
+          this.$emit('listenShowMenu', {type: 'choiceClick', size: this.customPx, title: this.title})
+          this.showDownloadChoice = !this.showDownloadChoice
+        } else {
+          this.$toasted.error('请选择简历尺寸')
+        }
       }
     },
     components: {}
