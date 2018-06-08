@@ -49,8 +49,8 @@
   import isempty from 'lodash.isempty'
   import NebPay from 'nebpay.js'
   const nebPay = new NebPay()
-  // const nebUrl = "https://pay.nebulas.io/api/mainnet/pay"
-  const nebUrl = "https://pay.nebulas.io/api/pay"
+  const nebUrl = "https://pay.nebulas.io/api/mainnet/pay"
+  // const nebUrl = "https://pay.nebulas.io/api/pay"
   export default {
     name: 'app',
     data() {
@@ -62,11 +62,8 @@
         resumeData: resumeData,
         code: str.code,
         // nebPay: new NebPay(),
-        // nebTo: 'n1cjAfTYk2bFVdM212UCMkMmNHJGhFCcKDZ', // mainnet
-        // dappContract: 'n1hrumGMTrmbT9LGbE5kdRQBFsTGjo6TbNf', // mainnet
-        nebTo: 'n1bs9seJ2QtqY7w28MkRTUkosciEwgCD4Fo', // testnet
-        dappContract: 'n1wzAXG12PCiro3F9K5s66SvxJt3qGDhnLX', // testnet
-        nebValue: '0',
+        dappContract: 'n1owtMDyRr2xDcKK3ZMPRoNqEcNjQADB6ko', // mainnet
+        // dappContract: 'n1wzAXG12PCiro3F9K5s66SvxJt3qGDhnLX', // testnet
         nebFrom: '',
         showModal: false
       }
