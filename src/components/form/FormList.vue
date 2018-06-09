@@ -49,7 +49,7 @@
                                                  v-model="fromData.workExperience.experience[0].time"></div>
             </div>
             <div class="inp-long inp-long-more">项目简介:
-              <input type="text" placeholder="1、" v-model="fromData.workExperience.experience[0].describe[0]" >
+              <input type="text" placeholder="1、" v-model="fromData.workExperience.experience[0].describe[0]">
               <input type="text" placeholder="2、" v-model="fromData.workExperience.experience[0].describe[1]">
               <input type="text" placeholder="3、" v-model="fromData.workExperience.experience[0].describe[2]">
             </div>
@@ -64,7 +64,7 @@
                                                  v-model="fromData.workExperience.experience[1].time"></div>
             </div>
             <div class="inp-long inp-long-more">项目简介:
-              <input type="text" placeholder="1、" v-model="fromData.workExperience.experience[1].describe[0]" >
+              <input type="text" placeholder="1、" v-model="fromData.workExperience.experience[1].describe[0]">
               <input type="text" placeholder="2、" v-model="fromData.workExperience.experience[1].describe[1]">
               <input type="text" placeholder="3、" v-model="fromData.workExperience.experience[1].describe[2]">
             </div>
@@ -79,128 +79,127 @@
                                                  v-model="fromData.workExperience.experience[2].time"></div>
             </div>
             <div class="inp-long inp-long-more">项目简介:
-              <input type="text" placeholder="1、" v-model="fromData.workExperience.experience[2].describe[0]" >
+              <input type="text" placeholder="1、" v-model="fromData.workExperience.experience[2].describe[0]">
               <input type="text" placeholder="2、" v-model="fromData.workExperience.experience[2].describe[1]">
               <input type="text" placeholder="3、" v-model="fromData.workExperience.experience[2].describe[2]">
-            </div>
             </div>
           </div>
           <div class="item-footer"><i class=" icon-plus-sign-alt icon-1x" @click="workIconClick"
                                       v-show="workExperienceFlag<2"></i>&nbsp;&nbsp;&nbsp;
           </div>
         </div>
-        <div class="item">
-          <div class="item-head">
-            <span>项目经验</span>
-            <span class="item-head-time">时间:<input type="text" placeholder="2001-2 至 今"
-                                                   v-model="fromData.projectExperience.time"></span>
+      <div class="item">
+        <div class="item-head">
+          <span>项目经验</span>
+          <span class="item-head-time">时间:<input type="text" placeholder="2001-2 至 今"
+                                                 v-model="fromData.projectExperience.time"></span>
+        </div>
+        <div class="item-content" v-if="projectExperienceFlag>=0">
+          <div class="contt clearfloat">
+            <div class="inp-short">项目名称:<input type="text" placeholder=""
+                                               v-model="fromData.projectExperience.experience[0].name"></div>
+            <div class="inp-short">项目技术:<input type="text" placeholder=""
+                                               v-model="fromData.projectExperience.experience[0].skill"></div>
+            <div class="inp-short">项目时间:<input type="text" placeholder="2001-2 至 今"
+                                               v-model="fromData.projectExperience.experience[0].time"></div>
           </div>
-          <div class="item-content" v-if="projectExperienceFlag>=0">
-            <div class="contt clearfloat">
-              <div class="inp-short">项目名称:<input type="text" placeholder=""
-                                                 v-model="fromData.projectExperience.experience[0].name"></div>
-              <div class="inp-short">项目技术:<input type="text" placeholder=""
-                                                 v-model="fromData.projectExperience.experience[0].skill"></div>
-              <div class="inp-short">项目时间:<input type="text" placeholder="2001-2 至 今"
-                                                 v-model="fromData.projectExperience.experience[0].time"></div>
-            </div>
-            <div class="inp-long inp-long-more">项目简介:
-              <input type="text" placeholder="1、" v-model="fromData.projectExperience.experience[0].describe[0]">
-              <input type="text" placeholder="2、" v-model="fromData.projectExperience.experience[0].describe[1]">
-              <input type="text" placeholder="3、" v-model="fromData.projectExperience.experience[0].describe[2]">
-            </div>
-          </div>
-          <div class="item-content" v-if="projectExperienceFlag>=1">
-            <div class="contt clearfloat">
-              <div class="inp-short">项目名称:<input type="text" placeholder=""
-                                                 v-model="fromData.projectExperience.experience[1].name"></div>
-              <div class="inp-short">项目技术:<input type="text" placeholder=""
-                                                 v-model="fromData.projectExperience.experience[1].skill"></div>
-              <div class="inp-short">项目时间:<input type="text" placeholder="2001-2 至 今"
-                                                 v-model="fromData.projectExperience.experience[1].time"></div>
-            </div>
-            <div class="inp-long inp-long-more">项目简介:
-              <input type="text" placeholder="1、" v-model="fromData.projectExperience.experience[1].describe[0]">
-              <input type="text" placeholder="2、" v-model="fromData.projectExperience.experience[1].describe[1]">
-              <input type="text" placeholder="3、" v-model="fromData.projectExperience.experience[1].describe[2]">
-            </div>
-          </div>
-          <div class="item-content" v-if="projectExperienceFlag>=2">
-            <div class="contt clearfloat">
-              <div class="inp-short">项目名称:<input type="text" placeholder=""
-                                                 v-model="fromData.projectExperience.experience[2].name"></div>
-              <div class="inp-short">项目技术:<input type="text" placeholder=""
-                                                 v-model="fromData.projectExperience.experience[2].skill"></div>
-              <div class="inp-short">项目时间:<input type="text" placeholder="2001-2 至 今"
-                                                 v-model="fromData.projectExperience.experience[2].time"></div>
-            </div>
-            <div class="inp-long inp-long-more">项目简介:
-              <input type="text" placeholder="1、" v-model="fromData.projectExperience.experience[2].describe[0]">
-              <input type="text" placeholder="2、" v-model="fromData.projectExperience.experience[2].describe[1]">
-              <input type="text" placeholder="3、" v-model="fromData.projectExperience.experience[2].describe[2]">
-            </div>
-          </div>
-          <div class="item-footer"><i class=" icon-plus-sign-alt icon-1x" @click="pojIconClick"
-                                      v-show="projectExperienceFlag<2"></i>&nbsp;&nbsp;&nbsp;
+          <div class="inp-long inp-long-more">项目简介:
+            <input type="text" placeholder="1、" v-model="fromData.projectExperience.experience[0].describe[0]">
+            <input type="text" placeholder="2、" v-model="fromData.projectExperience.experience[0].describe[1]">
+            <input type="text" placeholder="3、" v-model="fromData.projectExperience.experience[0].describe[2]">
           </div>
         </div>
-
-        <div class="item">
-          <div class="item-head">掌握技能</div>
-          <div class="item-content" v-if="skillFlag>=0">
-            <div class="contt clearfloat">
-              <div class="inp-short">技能分类:<input type="text" placeholder="" v-model="fromData.skill[0].type"></div>
-            </div>
-            <div class="inp-long inp-long-more">简介:
-              <input type="text" placeholder="1、" v-model="fromData.skill[0].describe[0]">
-              <input type="text" placeholder="2、" v-model="fromData.skill[0].describe[1]">
-              <input type="text" placeholder="3、" v-model="fromData.skill[0].describe[2]">
-            </div>
+        <div class="item-content" v-if="projectExperienceFlag>=1">
+          <div class="contt clearfloat">
+            <div class="inp-short">项目名称:<input type="text" placeholder=""
+                                               v-model="fromData.projectExperience.experience[1].name"></div>
+            <div class="inp-short">项目技术:<input type="text" placeholder=""
+                                               v-model="fromData.projectExperience.experience[1].skill"></div>
+            <div class="inp-short">项目时间:<input type="text" placeholder="2001-2 至 今"
+                                               v-model="fromData.projectExperience.experience[1].time"></div>
           </div>
-          <div class="item-content" v-if="skillFlag>=1">
-            <div class="contt clearfloat">
-              <div class="inp-short">技能分类:<input type="text" placeholder="" v-model="fromData.skill[1].type"></div>
-            </div>
-            <div class="inp-long inp-long-more">简介:
-              <input type="text" placeholder="1、" v-model="fromData.skill[1].describe[0]">
-              <input type="text" placeholder="2、" v-model="fromData.skill[1].describe[1]">
-              <input type="text" placeholder="3、" v-model="fromData.skill[1].describe[2]">
-            </div>
-          </div>
-          <div class="item-content" v-if="skillFlag>=2">
-            <div class="contt clearfloat">
-              <div class="inp-short">技能分类:<input type="text" placeholder="" v-model="fromData.skill[2].type"></div>
-            </div>
-            <div class="inp-long inp-long-more">简介:
-              <input type="text" placeholder="1、" v-model="fromData.skill[2].describe[0]">
-              <input type="text" placeholder="2、" v-model="fromData.skill[2].describe[1]">
-              <input type="text" placeholder="3、" v-model="fromData.skill[2].describe[2]">
-            </div>
-          </div>
-          <div class="item-footer"><i class=" icon-plus-sign-alt icon-1x" @click="skillIconClick"
-                                      v-show="skillFlag<2"></i>&nbsp;&nbsp;&nbsp;
+          <div class="inp-long inp-long-more">项目简介:
+            <input type="text" placeholder="1、" v-model="fromData.projectExperience.experience[1].describe[0]">
+            <input type="text" placeholder="2、" v-model="fromData.projectExperience.experience[1].describe[1]">
+            <input type="text" placeholder="3、" v-model="fromData.projectExperience.experience[1].describe[2]">
           </div>
         </div>
-
-        <div class="item last-item">
-          <div class="item-head">自我评价</div>
-          <div class="item-content">
-            <div class="inp-long inp-long-more">评价:
-              <input type="text" placeholder="1、" v-model="fromData.selfAssessment[0]">
-              <input type="text" placeholder="2、" v-model="fromData.selfAssessment[1]">
-              <input type="text" placeholder="3、" v-model="fromData.selfAssessment[2]">
-            </div>
+        <div class="item-content" v-if="projectExperienceFlag>=2">
+          <div class="contt clearfloat">
+            <div class="inp-short">项目名称:<input type="text" placeholder=""
+                                               v-model="fromData.projectExperience.experience[2].name"></div>
+            <div class="inp-short">项目技术:<input type="text" placeholder=""
+                                               v-model="fromData.projectExperience.experience[2].skill"></div>
+            <div class="inp-short">项目时间:<input type="text" placeholder="2001-2 至 今"
+                                               v-model="fromData.projectExperience.experience[2].time"></div>
           </div>
-          <div class="item-footer"><i class=" icon-plus-sign-alt icon-1x"></i>&nbsp;&nbsp;&nbsp;</div>
+          <div class="inp-long inp-long-more">项目简介:
+            <input type="text" placeholder="1、" v-model="fromData.projectExperience.experience[2].describe[0]">
+            <input type="text" placeholder="2、" v-model="fromData.projectExperience.experience[2].describe[1]">
+            <input type="text" placeholder="3、" v-model="fromData.projectExperience.experience[2].describe[2]">
+          </div>
+        </div>
+        <div class="item-footer"><i class=" icon-plus-sign-alt icon-1x" @click="pojIconClick"
+                                    v-show="projectExperienceFlag<2"></i>&nbsp;&nbsp;&nbsp;
         </div>
       </div>
-      <div class="xs"></div>
-      <div class="xs2"></div>
-      <div class="from-box-footer">
-        <span class="butt" @click="closeFormList">关闭窗口</span>
-        <span class="butt" @click="createResClick">预览简历</span>
+
+      <div class="item">
+        <div class="item-head">掌握技能</div>
+        <div class="item-content" v-if="skillFlag>=0">
+          <div class="contt clearfloat">
+            <div class="inp-short">技能分类:<input type="text" placeholder="" v-model="fromData.skill[0].type"></div>
+          </div>
+          <div class="inp-long inp-long-more">简介:
+            <input type="text" placeholder="1、" v-model="fromData.skill[0].describe[0]">
+            <input type="text" placeholder="2、" v-model="fromData.skill[0].describe[1]">
+            <input type="text" placeholder="3、" v-model="fromData.skill[0].describe[2]">
+          </div>
+        </div>
+        <div class="item-content" v-if="skillFlag>=1">
+          <div class="contt clearfloat">
+            <div class="inp-short">技能分类:<input type="text" placeholder="" v-model="fromData.skill[1].type"></div>
+          </div>
+          <div class="inp-long inp-long-more">简介:
+            <input type="text" placeholder="1、" v-model="fromData.skill[1].describe[0]">
+            <input type="text" placeholder="2、" v-model="fromData.skill[1].describe[1]">
+            <input type="text" placeholder="3、" v-model="fromData.skill[1].describe[2]">
+          </div>
+        </div>
+        <div class="item-content" v-if="skillFlag>=2">
+          <div class="contt clearfloat">
+            <div class="inp-short">技能分类:<input type="text" placeholder="" v-model="fromData.skill[2].type"></div>
+          </div>
+          <div class="inp-long inp-long-more">简介:
+            <input type="text" placeholder="1、" v-model="fromData.skill[2].describe[0]">
+            <input type="text" placeholder="2、" v-model="fromData.skill[2].describe[1]">
+            <input type="text" placeholder="3、" v-model="fromData.skill[2].describe[2]">
+          </div>
+        </div>
+        <div class="item-footer"><i class=" icon-plus-sign-alt icon-1x" @click="skillIconClick"
+                                    v-show="skillFlag<2"></i>&nbsp;&nbsp;&nbsp;
+        </div>
+      </div>
+
+      <div class="item last-item">
+        <div class="item-head">自我评价</div>
+        <div class="item-content">
+          <div class="inp-long inp-long-more">评价:
+            <input type="text" placeholder="1、" v-model="fromData.selfAssessment[0]">
+            <input type="text" placeholder="2、" v-model="fromData.selfAssessment[1]">
+            <input type="text" placeholder="3、" v-model="fromData.selfAssessment[2]">
+          </div>
+        </div>
+        <div class="item-footer"><i class=" icon-plus-sign-alt icon-1x"></i>&nbsp;&nbsp;&nbsp;</div>
       </div>
     </div>
+    <div class="xs"></div>
+    <div class="xs2"></div>
+    <div class="from-box-footer">
+      <span class="butt" @click="closeFormList">关闭窗口</span>
+      <span class="butt" @click="createResClick">预览简历</span>
+    </div>
+  </div>
   </div>
 </template>
 
@@ -497,8 +496,8 @@
   -----------------------------------*/
   .from-content .from-box-footer {
     position: absolute;
-    bottom: 8px;
-    left: 5px;
+    bottom: 4.5px;
+    left: 2.6px;
     width: 100%;
     height: 4rem;
     background: #ebebeb;

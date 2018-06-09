@@ -1,10 +1,12 @@
 <template>
     <div id="app">
     <ShowMenu :showSearchBar="showSearchBar"
+              :showSaveBar="showSaveBar"
               :title="nebFrom"
               v-on:onShowSearchBar="onShowSearchBar"
               v-on:listenShowMenu='listenShowMenu'
-              v-on:searchResume="searchResume"></ShowMenu>
+              v-on:searchResume="searchResume"
+              v-on:onShowSaveBar="onShowSaveBar"></ShowMenu>
     <ShowStyle ref="comShowStyle"></ShowStyle>
     <ShowResume ref="comShowResume" :resumeData="resumeData"></ShowResume>
     <transition name="fade">
@@ -59,6 +61,7 @@
         formListFlag: false,
         formListShow: false,
         showSearchBar: false,
+        showSaveBar: false,
         resumeData: resumeData,
         code: str.code,
         // nebPay: new NebPay(),
@@ -222,6 +225,9 @@
       },
       onShowModal() {
         this.showModal = !this.showModal
+      },
+      onShowSaveBar() {
+        this.showSaveBar = !this.showSaveBar
       }
     },
     components: {

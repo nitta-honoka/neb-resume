@@ -26,7 +26,7 @@
         <p class="file-des">下载简历</p>
       </div>
       <transition name="fade">
-        <div class="download-choice" v-show="showDownloadChoice">
+        <div class="download-choice" v-show="showSaveBar">
           <div class="name">
             <span>钱包地址：</span>
             <input type="text" v-model="title" placeholder="请输入地址"/>
@@ -52,6 +52,7 @@
           </div>
           <div class="save">
             <label @click="saveResume">保存并下载</label>
+            <label @click="downloadClick">关闭</label>
           </div>
         </div>
       </transition>
@@ -64,7 +65,6 @@
     data() {
       return {
         msg: 'hello vue',
-        showDownloadChoice: false,
         customPx: {
           width: "",
           height: ""
@@ -73,6 +73,9 @@
     },
     props:{
       showSearchBar: {
+        type: Boolean
+      },
+      showSaveBar: {
         type: Boolean
       },
       title: {
@@ -84,7 +87,7 @@
         this.$emit('listenShowMenu', {"type": "fileClick", "showFlag": true});
       },
       downloadClick: function () {
-        this.showDownloadChoice = !this.showDownloadChoice;
+        this.$emit('onShowSaveBar')
       },
       onShowSearchBar: function () {
         this.$emit('onShowSearchBar')
@@ -203,7 +206,7 @@
   .search-bar {
     position: absolute;
     z-index: 9999;
-    top: 100px;
+    top: 20px;
     left: 110%;
     width: 50rem;
     display: flex;
@@ -257,15 +260,21 @@
   }
   .download-choice .save > label {
     display: inline-block;
-    width: 80px;
+    width: 70px;
     height: 40px;
     line-height: 40px;
     text-align: center;
     border: solid 1px #f2f2f2;
     border-radius: 10px;
     color: #ffffff;
+  }
+  .download-choice .save > label:first-child {
     background: #3ca777;
     margin-left: 60px;
+    margin-right: 5px;
+  }
+  .download-choice .save > label:last-child {
+    color: #313131;
   }
   .size-choice {
     display: flex;
