@@ -145,7 +145,7 @@
             }
           })
 
-          this.queryInterval = setInterval(() => this.querySaveInfo(msg), 10000)
+          this.queryInterval = setInterval(() => this.querySaveInfo(msg), 5000)
         }
       },
       querySaveInfo: function(msg) {
